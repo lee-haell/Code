@@ -1,0 +1,22 @@
+*{ margin: 0; padding: 0; }
+ul, ol{ list-style: none; }
+a{ text-decoration: none; color: #fff; }
+header, #page, footer{ width: 100%; height: auto; }
+
+@font-face {
+    font-family: 'RenaultLife';
+    src: local("※"),
+        url("../font/RenaultLife.eot"),
+        url("../font/RenaultLife.woff") format('woff'),
+        url("../font/RenaultLife.ttf") format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html{ font-size: 16px; }
+
+body{ 
+    background: #040506; 
+    width: 100%;
+    margin: 0 auto;
+}

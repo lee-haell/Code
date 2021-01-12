@@ -1,0 +1,550 @@
+@media screen and (max-width: 1920px) {
+  html,
+  body {
+    width: 100%;
+    height: 100%;
+    font-size: 16px;
+  }
+
+  /* 로딩 화면 */
+  .loading-wrap {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 5;
+    float: left;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.9);
+    -webkit-transition: 1s ease;
+    -moz-transition: 1s ease;
+    -os-transition: 1s ease;
+    -o-transition: 1s ease;
+    transition: 1s ease;
+  }
+  .loading-wrap .loading-inner {
+    width: 200px;
+    height: 40px;
+    position: fixed;
+    z-index: 4;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+  }
+  .loading-wrap .loading-inner .loading {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+  }
+
+  /* 로딩 - 움직이는 네모 */
+  .loading-wrap .loading-inner .loading span {
+    display: inline-block;
+    vertical-align: middle;
+    width: 10px;
+    height: 10px;
+    background: #fed401;
+    text-indent: -999px;
+    margin: 0 1px;
+    -webkit-animation: loading 1s ease infinite;
+    -moz-animation: loading 1s ease infinite;
+    -ms-animation: loading 1s ease infinite;
+    -o-animation: loading 1s ease infinite;
+    animation: loading 1s ease infinite;
+  }
+
+  /* 로딩 - 늦게 움직이는 네모들 */
+  .loading-wrap .loading span:nth-child(2) {
+    -webkit-animation-delay: 0.2s;
+    animation-delay: 0.2s;
+  }
+  .loading-wrap .loading span:nth-child(3) {
+    -webkit-animation-delay: 0.4s;
+    animation-delay: 0.4s;
+  }
+  .loading-wrap .loading span:nth-child(4) {
+    -webkit-animation-delay: 0.6s;
+    animation-delay: 0.6s;
+  }
+
+  /* 로딩 - 사각형 애니메이션 */
+  @-webkit-keyframes loading {
+    0% {
+      -webkit-transform: translateY(0);
+      transform: translateY(0);
+    }
+    50% {
+      -webkit-transform: translateY(10px);
+      transform: translateY(10px);
+    }
+  }
+  .loading-wrap .contents {
+    width: 20%;
+    height: 25px;
+    position: absolute;
+    top: 56%;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+  }
+  .loading-wrap .contents p {
+    font-family: "RenaultLife";
+    font-size: 1.25em;
+    color: #fff;
+    text-align: center;
+  }
+
+  /*--헤더 영역--*/
+  header {
+    width: 100%;
+    height: auto;
+  }
+
+  .header-bg {
+    display: block;
+    width: 100%;
+    height: 10vh;
+    position: absolute;
+    z-index: 1;
+    background: #040506;
+    border-bottom: 1px solid #666;
+    transition: all 0.3s ease;
+  }
+
+  header #wrap {
+    width: 93%;
+    height: 10vh;
+    margin: 0 auto;
+    position: relative;
+    z-index: 3;
+  }
+
+  /*--로고 영역--*/
+  header #wrap h1 {
+    width: 8%;
+    position: absolute;
+    top: 28px;
+  }
+
+  header #wrap .tm-wrap,
+  .tm-icon {
+    display: none;
+  }
+
+  /*--대메뉴 영역--*/
+  header #wrap .pc-wrap {
+    width: 41%;
+    height: auto;
+    top: 45%;
+    left: 50%;
+    right: 10%;
+    position: absolute;
+  }
+  header #wrap .pc-wrap .pc-list {
+    width: 100%;
+    height: auto;
+  }
+  header #wrap .pc-wrap .pc-list .main_menu {
+    width: 25%;
+    float: left;
+    text-align: center;
+  }
+
+  header #wrap .pc-wrap .pc-list .main_menu > a {
+    display: block;
+    height: 30px;
+    line-height: 30px;
+    font-family: "RenaultLife";
+    font-size: 1em;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+  }
+
+  header #wrap .pc-wrap .pc-list .main_menu:hover > a {
+    color: #fed401;
+    transition: all 0.3s ease;
+  }
+
+  header #wrap > .pc-wrap .pc-list .main_menu .pc-ol {
+    width: 100%;
+    height: 100%;
+    margin-top: 16%;
+    opacity: 0;
+    transition: all 0.3s ease;
+  }
+  header #wrap .pc-wrap .pc-list .main_menu .pc-ol li {
+    width: 100%;
+    height: 100%;
+  }
+  header #wrap .pc-wrap .pc-list .main_menu .pc-ol li a {
+    display: block;
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    font-family: "RenaultLife";
+    font-size: 0.9em;
+    font-weight: 400;
+  }
+  header #wrap .pc-wrap .pc-list .main_menu ol li:hover a {
+    color: #888;
+    transition: all 0.3s ease;
+  }
+
+  /*--햄버거 버튼 영역--*/
+  #hamburger-menu {
+    display: none;
+  }
+
+  /*--로그인 아이콘 영역--*/
+  header #wrap .icon {
+    position: absolute;
+    top: 45%;
+    right: 0;
+    width: 8%;
+    height: 20px;
+  }
+
+  header #wrap .icon li {
+    width: 25%;
+    height: 100%;
+    float: left;
+    margin-right: 5%;
+  }
+
+  header #wrap .icon li:nth-child(3) {
+    margin-right: 0;
+  }
+
+  header #wrap .icon li:nth-child(2) {
+    background-position: -40px;
+  }
+
+  header #wrap .icon li:nth-child(3) {
+    background-position: -73px;
+  }
+
+  /*--트위지 메인 영역--*/
+  .main-wrap {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    position: relative;
+  }
+
+  /*--트위지 메인 - 텍스트 영역--*/
+  .main-wrap .main-txt {
+    width: 50%;
+    height: auto;
+    position: absolute;
+    z-index: 1;
+    margin-top: 20%;
+    margin-left: 12.55%;
+  }
+  .main-wrap .main-txt h2 {
+    width: 100%;
+    font-family: "RenaultLife";
+    font-weight: 600;
+    font-size: 3.5em;
+    color: #fed401;
+  }
+
+  .main-wrap .main-txt > p {
+    width: 100%;
+    margin-top: 2vh;
+    font-family: "Noto Sans KR";
+    font-weight: 400;
+    font-size: 1.25em;
+    color: #fff;
+  }
+
+  .main-wrap .main-txt #btn {
+    display: block;
+    width: 165px;
+    height: 5.5vh;
+    line-height: 5.5vh;
+    background: #fed401;
+    text-align: center;
+    margin-top: 3.5vh;
+  }
+
+  .main-wrap .main-txt #btn a {
+    display: block;
+    font-family: "Noto Sans KR";
+    font-size: 1em;
+    font-weight: 600;
+    color: #040506;
+  }
+
+  /*--트위지 메인 - 비주얼 영역--*/
+  .main-wrap #main_vis {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .main-wrap #main_vis .main_list {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+  }
+
+  .main-wrap #main_vis .main_list li:first-child {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    background: url(../images/main_01.jpg) center center no-repeat;
+    background-size: cover;
+  }
+
+  .main-wrap #main_vis .main_list li:nth-child(2) {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    background: url(../images/main_02.jpg) center center no-repeat;
+    background-size: cover;
+  }
+
+  .main-wrap #main_vis .main_list li:nth-child(3) {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    background: url(../images/main_03.jpg) center center no-repeat;
+    background-size: cover;
+  }
+
+  /*--메인 비주얼 페이저 영역--*/
+  #bx-pager {
+    width: 11.35%;
+    height: 18.5vh;
+    position: absolute;
+    top: 60vh;
+    right: 0;
+  }
+
+  #bx-pager li {
+    list-style: none;
+    position: relative;
+  }
+
+  #bx-pager li a {
+    display: block;
+    color: #888;
+  }
+
+  #bx-pager li a.active {
+    font-size: 1.5em;
+    color: #fff;
+    transition: all 0.3s ease;
+  }
+
+  #bx-pager > li:nth-child(1) {
+    font-family: "RenaultLife";
+    font-weight: 600;
+    font-size: 1.3em;
+    margin-bottom: 20px;
+  }
+
+  #bx-pager > li:nth-child(2) {
+    font-family: "RenaultLife";
+    font-weight: 600;
+    font-size: 1.3em;
+    color: #666;
+    margin-bottom: 2vh;
+  }
+
+  #bx-pager > li:nth-child(3) {
+    font-family: "RenaultLife";
+    font-weight: 600;
+    font-size: 1.3em;
+    color: #666;
+    margin-bottom: 0;
+  }
+
+  #bx-pager .btn .yellow {
+    position: absolute;
+    margin-top: 0.5em;
+    width: 0;
+    height: 2px;
+    background: #fed401;
+  }
+
+  /*--푸터 영역--*/
+  footer {
+    width: 100%;
+    height: 180px;
+    background: #040506;
+    position: relative;
+    bottom: 0;
+  }
+  footer .footer {
+    width: 100%;
+    position: relative;
+    margin: 0 auto;
+  }
+
+  /*--푸터 - 르노 로고 영역--*/
+  footer .footer .footer-logo {
+    width: 20%;
+    height: 100%;
+    float: left;
+  }
+  footer .footer .footer-logo > span {
+    width: 100%;
+    height: 100%;
+    float: left;
+    padding-top: 40px;
+    padding-left: 10%;
+  }
+
+  /*--푸터 - 정보 영역--*/
+  footer .footer .footer-info {
+    width: 30%;
+    height: 100%;
+    float: left;
+  }
+
+  footer .footer .footer-info .footer-list {
+    width: 100%;
+    height: auto;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    padding-left: 2%;
+    float: left;
+    color: #ccc;
+  }
+
+  footer .footer .footer-info .footer-list li {
+    display: block;
+    margin-right: 1%;
+    font-family: "Noto Sans KR";
+    font-size: 0.7em;
+    font-weight: 400;
+    line-height: 25px;
+    color: #ccc;
+  }
+
+  /*--푸터 오른쪽 영역--*/
+  footer .footer .footer-right {
+    width: 30%;
+    height: 100%;
+    float: right;
+  }
+  footer .footer .footer-right .footer-sns {
+    width: 40%;
+    height: 22px;
+    margin-top: 40px;
+  }
+
+  footer .footer .footer-right .footer-sns li {
+    width: 25%;
+    height: 100%;
+    float: left;
+  }
+
+  /*--푸터 - 패밀리 사이트 영역--*/
+  footer .footer .footer-right .fms_site {
+    width: 50%;
+    height: 100%;
+    position: relative;
+    color: #222;
+  }
+  footer .footer .footer-right .fms_site p {
+    display: block;
+    width: 100%;
+    margin: 10px auto;
+    font-family: "Noto Sans KR";
+    font-size: 0.75em;
+    font-weight: 400;
+    color: #ccc;
+  }
+
+  footer .footer .footer-right .fms_site .fms-box {
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    position: relative;
+    margin-bottom: 20px;
+    background: #fff;
+  }
+
+  footer .footer .footer-right .fms_site .fms-box .fms {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+
+  footer .footer .footer-right .fms_site .fms-box .fms a {
+    font-family: "RenaultLife";
+    font-weight: 600;
+    font-size: 1em;
+    color: #444;
+    margin-left: 10px;
+  }
+  footer .footer .footer-right .fms_site .fms-box .arrow {
+    width: 13px;
+    height: 10px;
+    position: absolute;
+    top: 10px;
+    right: 15px;
+  }
+  footer .footer .footer-right .fms_site .fms-box .arrow:before {
+    content: "";
+    display: block;
+    width: 8px;
+    height: 2px;
+    position: absolute;
+    top: 2px;
+    left: 0;
+    background: #444;
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    transition-duration: 0.3s;
+    cursor: pointer;
+  }
+
+  footer .footer .footer-right .fms_site .fms-box .arrow:after {
+    content: "";
+    display: block;
+    clear: both;
+    width: 8px;
+    height: 2px;
+    position: absolute;
+    top: 2px;
+    right: 0;
+    background: #444;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transition-duration: 0.3s;
+    cursor: pointer;
+  }
+
+  footer .footer .footer-right .fms_site #family #list {
+    opacity: 0;
+    width: 100%;
+    padding: 5px 10px;
+    box-sizing: border-box;
+    background: #ccc;
+    position: absolute;
+    margin-top: -162px;
+    transition: all 0.3s ease;
+    /*        display: none;*/
+  }
+
+  footer .footer .footer-right .fms_site #family #list li a {
+    font-family: "Noto Sans KR";
+    font-size: 0.75em;
+    font-weight: 400;
+    line-height: 35px;
+    color: #666;
+  }
+}
